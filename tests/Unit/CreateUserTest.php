@@ -5,7 +5,7 @@ namespace Tests\Unit;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-class CreateUserTests extends TestCase
+class CreateUserTest extends TestCase
 {
     private $createRoute;
 

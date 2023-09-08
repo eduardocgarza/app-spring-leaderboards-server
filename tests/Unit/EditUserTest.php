@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-class EditUserTests extends TestCase
+class EditUserTest extends TestCase
 {
     /**
      * Generate the route for editing a user.

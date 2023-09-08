@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-class DeleteUserTests extends TestCase
+class DeleteUserTest extends TestCase
 {
     /**
      * Send request with invalid userID.

@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-class GetUsersTests extends TestCase
+class GetUsersTest extends TestCase
 {
     public function testGetAllUsersReturnsEmptyArray(): void
     {

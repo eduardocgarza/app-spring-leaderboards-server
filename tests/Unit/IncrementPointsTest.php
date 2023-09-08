@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Response;
 use Tests\TestCase;
 
-class IncrementPointsTests extends TestCase
+class IncrementPointsTest extends TestCase
 {
     /**
      * Send request with invalid userID.
