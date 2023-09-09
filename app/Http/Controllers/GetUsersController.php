@@ -10,8 +10,7 @@ class GetUsersController extends Controller
     public function index()
     {
         $users = User::orderByDesc('points')->orderBy('username')->get();
-        $formattedUsers = UserResource::collection($users);
-
+        $formattedUsers = UserResource::collection($users)->toArray(request());
         return $formattedUsers;
     }
 }

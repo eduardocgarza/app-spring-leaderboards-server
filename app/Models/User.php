@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    protected $table = 'sl___users';
     use HasFactory, Notifiable;
 
     /**
@@ -20,6 +21,8 @@ class User extends Authenticatable
         'username',
         'first_name',
         'points',
+        'address',
+        'dateBirth',
     ];
 
     /**
