@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class UPDATEUSERCONTROLLER extends Controller
+class UpdateUserController extends Controller
 {
     public function update($userID, Request $request)
     {
