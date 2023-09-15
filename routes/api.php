@@ -10,21 +10,24 @@ use Illuminate\Support\Facades\Route;
 
 require_once app_path('Helpers/helpers.php');
 
-// Get All User -- GET /users
-Route::get("/users", [GetUsersController::class, 'index']);
+Route::prefix('users')->group(function() {
+    // Get All User -- GET /users
+    Route::get("/", [GetUsersController::class, 'index']);
 
-// Create User -- POST /users
-Route::post("/users", [CreateUserController::class, 'store']);
+    // Create User -- POST /users
+    Route::post("", [CreateUserController::class, 'store']);
 
-// Edit User -- PUT /users/{userID}
-Route::put("/users/{userID}", [UpdateUserController::class, 'update']);
+    // Edit User -- PUT /users/{userID}
+    Route::put("/{userID}", [UpdateUserController::class, 'update']);
 
-// Delete User -- DELETE /users/{userID}
-Route::delete("/users/{userID}", [DeleteUserController::class, 'destroy']);
+    // Delete User -- DELETE /users/{userID}
+    Route::delete("/{userID}", [DeleteUserController::class, 'destroy']);
 
-// Increment User Points by 1 -- PUT /users/{userID}
-Route::put("/users/{userID}/increment", [IncrementUserPointsController::class, 'increment']);
+    // Increment User Points by 1 -- PUT /users/{userID}
+    Route::put("/{userID}/increment", [IncrementUserPointsController::class, 'increment']);
 
-// Decrement User Points by 1 -- PUT /users/{userID}
-Route::put("/users/{userID}/decrement", [DecrementUserPointsController::class, 'decrement']);
+    // Decrement User Points by 1 -- PUT /users/{userID}
+    Route::put("/{userID}/decrement", [DecrementUserPointsController::class, 'decrement']);
+});
+
 
